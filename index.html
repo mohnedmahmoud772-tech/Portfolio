@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Muhannad Dinar | Mid-level Graphic Designer & UI/UX Designer</title>
+    <title>MUHANNAD MAHMOUD — Graphic Designer</title>
     <meta
       name="description"
-      content="Portfolio of Muhannad Mahmoud Abdelaty Dinar, Mid-level Graphic Designer & UI/UX Designer with 3+ years experience driving visual brand systems across Egyptian and Saudi markets."
+      content="Portfolio of Muhannad Mahmoud, Graphic Designer with 3+ years experience driving strategic brand identities, high-converting social media campaigns, and front-end digital experiences across Egyptian and Saudi markets."
     />
-    <link rel="icon" href="muhannad-typo-logo.png" type="image/png" />
+    <link rel="icon" href="assets/muhannad-typo-logo.png" type="image/png" />
 
     <!-- Fonts: Syne + Plus Jakarta Sans + Alexandria + Space Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,29 +29,37 @@
   </head>
 
   <body class="dark-theme">
-    <!-- Interactive Grid Tracking Mesh (Spotlight follows cursor) -->
-    <div class="interactive-grid-mesh" id="spotlightGrid"></div>
+    <!-- Accessible Skip to Main Content Link -->
+    <a href="#main" class="skip-to-content">Skip to main content</a>
 
-    <!-- Soft Atmospheric Ambient Glow Gradients (No Grain/Noise) -->
-    <div class="ambient-glow-mesh">
+    <!-- Subtle Interactive Grid Tracking Mesh -->
+    <div class="interactive-grid-mesh" id="spotlightGrid" aria-hidden="true"></div>
+
+    <!-- Soft Atmospheric Purple Ambient Spotlight -->
+    <div class="purple-cursor-spotlight" id="purpleSpotlight" aria-hidden="true"></div>
+
+    <!-- Ambient Atmospheric Glow Mesh -->
+    <div class="ambient-glow-mesh" aria-hidden="true">
       <div class="glow-orb orb-1"></div>
       <div class="glow-orb orb-2"></div>
       <div class="glow-orb orb-3"></div>
     </div>
 
     <!-- Fluid Custom Magnetic Cursor -->
-    <div class="custom-cursor-dot" id="cursorDot"></div>
-    <div class="custom-cursor-outline" id="cursorOutline"></div>
+    <div class="custom-cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="custom-cursor-outline" id="cursorOutline" aria-hidden="true"></div>
 
     <!-- Floating Minimalist Header -->
-    <header class="site-header">
+    <header class="site-header" role="banner">
       <div class="nav-container">
-        <a href="#hero" class="brand-monogram">
+        <a href="#hero" class="brand-monogram" aria-label="Muhannad Dinar - Return to homepage">
           <div class="logo-circ-badge">
             <img
-              src="muhannad-typo-logo.png"
-              alt="مهند محمود Typography Logo"
+              src="assets/muhannad-typo-logo.png"
+              alt="Muhannad Arabic Calligraphy Monogram Logo"
               class="brand-logo-img"
+              width="44"
+              height="44"
             />
           </div>
           <div class="brand-text-group">
@@ -62,54 +70,49 @@
           </div>
         </a>
 
-        <nav class="nav-menu" id="navMenu">
-          <a href="#work" class="nav-link"
-            ><span class="nav-num"></span> Works</a
-          >
-          <a href="#about" class="nav-link"
-            ><span class="nav-num"></span> About</a
-          >
-          <a href="#experience" class="nav-link"
-            ><span class="nav-num"></span> Experience</a
-          >
-          <a href="#skills" class="nav-link"
-            ><span class="nav-num"></span> Arsenal</a
-          >
-          <a href="#contact" class="nav-link"
-            ><span class="nav-num"></span> Contact</a
-          >
+        <nav class="nav-menu" id="navMenu" aria-label="Primary Navigation">
+          <a href="#work" class="nav-link"><span class="nav-num">01</span> Works</a>
+          <a href="#about" class="nav-link"><span class="nav-num">02</span> About</a>
+          <a href="#experience" class="nav-link"><span class="nav-num">03</span> Experience</a>
+          <a href="#skills" class="nav-link"><span class="nav-num">04</span> Tools</a>
+          <a href="#contact" class="nav-link"><span class="nav-num">05</span> Contact</a>
         </nav>
 
         <div class="nav-actions">
-          <div class="availability-badge">
-            <span class="pulse-indicator"></span>
+          <div class="availability-badge" aria-label="Current status: Available For Projects">
+            <span class="pulse-indicator" aria-hidden="true"></span>
             <span class="badge-text">Available For Projects</span>
           </div>
           <a
-            href="CV - Muhannad Mahmoud.pdf"
+            href="assets/Muhannad-CV.pdf"
+            download="CV - Muhannad Mahmoud.pdf"
             target="_blank"
+            rel="noopener noreferrer"
             class="btn-cv-pill"
-            title="Download Official CV"
+            aria-label="Download Muhannad Mahmoud Official CV PDF"
           >
-            <i class="fa-solid fa-file-arrow-down"></i>
+            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
             <span>Download CV</span>
           </a>
         </div>
 
-        <!-- Mobile Toggle -->
+        <!-- Mobile Toggle (Animated Hamburger to X) -->
         <button
           class="mobile-toggle"
           id="mobileToggle"
-          aria-label="Toggle Navigation"
+          aria-label="Toggle Navigation Menu"
+          aria-expanded="false"
+          aria-controls="navMenu"
         >
-          <span></span>
-          <span></span>
+          <span class="toggle-bar bar-top"></span>
+          <span class="toggle-bar bar-mid"></span>
+          <span class="toggle-bar bar-bot"></span>
         </button>
       </div>
     </header>
 
     <!-- Page Content -->
-    <main class="page-wrapper">
+    <main class="page-wrapper" id="main" tabindex="-1">
       <!-- ================= HERO SECTION ================= -->
       <section class="hero-section" id="hero">
         <div class="hero-container">
@@ -120,7 +123,7 @@
               <span class="tag-sep">•</span>
               <span class="tag-role">UI/UX DESIGNER</span>
               <span class="tag-sep">•</span>
-              <span class="tag-loc">FRONT-END DEVELOPER</span>
+              <span class="tag-role">FRONT-END DEVELOPER</span>
             </div>
 
             <h1 class="hero-headline">
@@ -139,49 +142,49 @@
             <div class="hero-actions-group">
               <a href="#work" class="btn-primary-glow">
                 <span>Explore Selected Works</span>
-                <i class="fa-solid fa-arrow-down"></i>
+                <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
               </a>
 
               <a
-                href="CV - Muhannad Mahmoud.pdf"
+                href="assets/Muhannad-CV.pdf"
+                download="CV - Muhannad Mahmoud.pdf"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn-secondary-glass"
+                aria-label="Download Muhannad Mahmoud Official CV"
               >
-                <i class="fa-solid fa-file-arrow-down"></i>
+                <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
                 <span>Download CV</span>
               </a>
 
               <a
                 href="https://www.behance.net/mohanedmahmoud1"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn-secondary-glass"
+                aria-label="Visit Muhannad Mahmoud's Behance Portfolio (opens in new tab)"
               >
-                <i class="fa-brands fa-behance"></i>
+                <i class="fa-brands fa-behance" aria-hidden="true"></i>
                 <span>Behance</span>
-                <i class="fa-solid fa-arrow-up-right-from-square arrow-ext"></i>
+                <i class="fa-solid fa-arrow-up-right-from-square arrow-ext" aria-hidden="true"></i>
               </a>
             </div>
 
             <!-- Verified Key Metrics -->
-            <div class="hero-metrics-strip">
+            <div class="hero-metrics-strip" aria-label="Professional Career Metrics">
               <div class="metric-box">
                 <span class="num">120+</span>
                 <span class="label">Clients Served</span>
               </div>
-              <div class="metric-divider"></div>
+              <div class="metric-divider" aria-hidden="true"></div>
               <div class="metric-box">
                 <span class="num">40+</span>
                 <span class="label">Designers Mentored</span>
               </div>
-              <div class="metric-divider"></div>
+              <div class="metric-divider" aria-hidden="true"></div>
               <div class="metric-box">
                 <span class="num">+30%</span>
                 <span class="label">Engagement Growth</span>
-              </div>
-              <div class="metric-divider"></div>
-              <div class="metric-box">
-                <span class="num">500+</span>
-                <span class="label">Campaign Leads</span>
               </div>
             </div>
           </div>
@@ -190,24 +193,22 @@
           <div class="hero-visual-col">
             <div class="portrait-stage">
               <!-- Ambient Atmospheric Halos -->
-              <div class="halo-circle outer-halo"></div>
-              <div class="halo-circle inner-halo"></div>
+              <div class="halo-circle outer-halo" aria-hidden="true"></div>
+              <div class="halo-circle inner-halo" aria-hidden="true"></div>
 
-              <!-- Floating Glass Chips (Computex as Lead Director Role) -->
+              <!-- Floating Glass Chips -->
               <div class="floating-chip chip-computex">
-                <div class="chip-icon">
+                <div class="chip-icon" aria-hidden="true">
                   <i class="fa-solid fa-compass-drafting"></i>
                 </div>
                 <div class="chip-info">
                   <span class="chip-title">Computex</span>
-                  <span class="chip-sub"
-                    >Design Lead & Director • 40+ Mentored</span
-                  >
+                  <span class="chip-sub">Design Lead • 40+ Designers Mentored</span>
                 </div>
               </div>
 
               <div class="floating-chip chip-markets">
-                <div class="chip-icon">
+                <div class="chip-icon" aria-hidden="true">
                   <i class="fa-solid fa-chart-line"></i>
                 </div>
                 <div class="chip-info">
@@ -219,16 +220,20 @@
               <!-- Main Enlarged Portrait Card -->
               <div class="portrait-card">
                 <img
-                  src="muhannad-portrait.jpg"
-                  alt="Muhannad Mahmoud - Graphic Designer"
+                  src="assets/muhannad-portrait.jpg"
+                  alt="Muhannad Mahmoud, Graphic Designer Portrait"
                   class="portrait-img"
+                  width="370"
+                  height="440"
+                  fetchpriority="high"
+                  decoding="async"
                 />
-                <div class="portrait-glass-edge"></div>
+                <div class="portrait-glass-edge" aria-hidden="true"></div>
               </div>
 
               <!-- Live Status Pill -->
               <div class="portrait-status-pill">
-                <span class="status-dot"></span>
+                <span class="status-dot" aria-hidden="true"></span>
                 <span>Creating Engaging Visual Experiences</span>
               </div>
             </div>
@@ -236,29 +241,55 @@
         </div>
       </section>
 
-      <!-- ================= INFINITE MARQUEE ================= -->
-      <div class="futuristic-ticker">
-        <div class="ticker-track">
-          <span>BRAND IDENTITY SYSTEMS</span>
-          <span class="ticker-dot">✦</span>
-          <span>CREATIVE DIRECTION</span>
-          <span class="ticker-dot">✦</span>
-          <span>SOCIAL MEDIA CAMPAIGNS</span>
-          <span class="ticker-dot">✦</span>
-          <span>UI/UX DESIGN & FIGMA</span>
-          <span class="ticker-dot">✦</span>
-          <span>COMPUTEX DESIGN DIRECTOR</span>
-          <span class="ticker-dot">✦</span>
-          <span>SAUDI MARKET BRANDING</span>
-          <span class="ticker-dot">✦</span>
-          <span>BRAND IDENTITY SYSTEMS</span>
-          <span class="ticker-dot">✦</span>
-          <span>CREATIVE DIRECTION</span>
-          <span class="ticker-dot">✦</span>
-          <span>SOCIAL MEDIA CAMPAIGNS</span>
-          <span class="ticker-dot">✦</span>
+      <!-- ================= MAIN ANIMATED SERVICES MARQUEE ================= -->
+      <section class="services-marquee-section" aria-label="Services & Strategic Disciplines">
+        <div class="services-marquee-header">
+          <span class="marquee-market-badge">
+            Turning ideas into visuals that inspire
+          </span>
+          <h2 class="services-marquee-heading" aria-label="Design. Create. Develop.">
+            <span class="mh-word">DESIGN<span class="mh-dot">.</span></span>
+            <span class="mh-star" aria-hidden="true">✳</span>
+            <span class="mh-word">CREATE<span class="mh-dot">.</span></span>
+            <span class="mh-star" aria-hidden="true">✳</span>
+            <span class="mh-word">DEVELOP<span class="mh-dot">.</span></span>
+          </h2>
         </div>
-      </div>
+
+        <div class="futuristic-ticker" aria-hidden="true">
+          <div class="ticker-track">
+            <span>VISUAL DESIGN</span>
+            <span class="ticker-star">✳</span>
+            <span>UI/UX DESIGN</span>
+            <span class="ticker-star">✳</span>
+            <span>GRAPHIC DESIGN</span>
+            <span class="ticker-star">✳</span>
+            <span>DIGITAL EXPERIENCES</span>
+            <span class="ticker-star">✳</span>
+            <span>LOGO DESIGN</span>
+            <span class="ticker-star">✳</span>
+            <span>BRANDING & VISUAL IDENTITY</span>
+            <span class="ticker-star">✳</span>
+            <span>CREATIVE EXPERTISE ACROSS EGYPTIAN & SAUDI MARKETS</span>
+            <span class="ticker-star">✳</span>
+            <!-- Seamless infinite duplication -->
+            <span>VISUAL DESIGN</span>
+            <span class="ticker-star">✳</span>
+            <span>UI/UX DESIGN</span>
+            <span class="ticker-star">✳</span>
+            <span>GRAPHIC DESIGN</span>
+            <span class="ticker-star">✳</span>
+            <span>DIGITAL EXPERIENCES</span>
+            <span class="ticker-star">✳</span>
+            <span>LOGO DESIGN</span>
+            <span class="ticker-star">✳</span>
+            <span>BRANDING & VISUAL IDENTITY</span>
+            <span class="ticker-star">✳</span>
+            <span>CREATIVE EXPERTISE ACROSS EGYPTIAN & SAUDI MARKETS</span>
+            <span class="ticker-star">✳</span>
+          </div>
+        </div>
+      </section>
 
       <!-- ================= SELECTED WORKS / PORTFOLIO ================= -->
       <section class="works-section" id="work">
@@ -273,33 +304,52 @@
               </p>
             </div>
 
-            <!-- Category Filter Buttons -->
-            <div class="filter-tabs-wrapper" id="filterTabs">
-              <button class="filter-tab active" data-filter="all">
+            <!-- Category Filter Buttons (Simplified: Branding & Social Media Campaigns) -->
+            <div class="filter-tabs-wrapper" id="filterTabs" role="tablist" aria-label="Filter projects by discipline">
+              <button
+                class="filter-tab active"
+                role="tab"
+                id="tab-all"
+                aria-selected="true"
+                aria-controls="projectsGrid"
+                data-filter="all"
+              >
                 All (8)
               </button>
-              <button class="filter-tab" data-filter="branding">
+              <button
+                class="filter-tab"
+                role="tab"
+                id="tab-branding"
+                aria-selected="false"
+                aria-controls="projectsGrid"
+                data-filter="branding"
+              >
                 Branding
               </button>
-              <button class="filter-tab" data-filter="campaigns">
-                Campaigns & Social
-              </button>
-              <button class="filter-tab" data-filter="direction">
-                Art Direction
-              </button>
-              <button class="filter-tab" data-filter="uiux">
-                UI/UX Design
+              <button
+                class="filter-tab"
+                role="tab"
+                id="tab-campaigns"
+                aria-selected="false"
+                aria-controls="projectsGrid"
+                data-filter="campaigns"
+              >
+                Social Media & Campaigns
               </button>
             </div>
           </div>
 
           <!-- Projects Bento Grid -->
-          <div class="projects-grid" id="projectsGrid">
+          <div class="projects-grid" id="projectsGrid" role="region" aria-label="Featured Projects Gallery">
             <!-- Project 1: Computex Design Direction -->
             <div
               class="project-card large"
-              data-category="direction"
-              data-img="computex-direction.jpg"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-label="View case study for Computex Creative Direction & Academy System"
+              data-category="branding"
+              data-img="assets/computex-direction.jpg"
               data-title="Computex Brand System & Creative Direction"
               data-type="Creative Direction & Team Leadership"
               data-client="Computex Academy"
@@ -307,20 +357,23 @@
             >
               <div class="card-media">
                 <img
-                  src="computex-direction.jpg"
-                  alt="Computex Design Direction"
+                  src="assets/computex-direction.jpg"
+                  alt="Computex Design Direction visual system and marketing collateral"
                   loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="380"
                 />
-                <div class="card-overlay">
+                <div class="card-overlay" aria-hidden="true">
                   <span class="view-btn"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     Explore Project</span
                   >
                 </div>
               </div>
               <div class="card-content">
                 <div class="card-meta">
-                  <span class="project-tag tag-burgundy">Director Level</span>
+                  <span class="project-tag tag-burgundy">Branding</span>
                   <span class="project-tag">40+ Designers Led</span>
                   <span class="project-year">2025</span>
                 </div>
@@ -337,8 +390,12 @@
             <!-- Project 2: RenadMadi Saudi Campaigns -->
             <div
               class="project-card"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-label="View case study for RenadMadi Strategic Campaigns in Saudi Arabia"
               data-category="campaigns"
-              data-img="renadmadi-saudi.jpg"
+              data-img="assets/renadmadi-saudi.jpg"
               data-title="RenadMadi Agency — Saudi Market Campaigns"
               data-type="Marketing Visuals & Advertising"
               data-client="IT.RenadMadi Agency, Saudi Arabia"
@@ -346,13 +403,16 @@
             >
               <div class="card-media">
                 <img
-                  src="renadmadi-saudi.jpg"
-                  alt="RenadMadi Saudi Campaigns"
+                  src="assets/renadmadi-saudi.jpg"
+                  alt="RenadMadi Saudi market marketing and social media campaign designs"
                   loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="280"
                 />
-                <div class="card-overlay">
+                <div class="card-overlay" aria-hidden="true">
                   <span class="view-btn"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     Explore Project</span
                   >
                 </div>
@@ -373,8 +433,12 @@
             <!-- Project 3: Drex Clothing Brand Campaign -->
             <div
               class="project-card"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-label="View case study for Drex Streetwear Campaign"
               data-category="campaigns"
-              data-img="drex-apparel.jpg"
+              data-img="assets/drex-apparel.jpg"
               data-title="Drex Apparel — Commercial Launch"
               data-type="Social Media & Fashion E-commerce"
               data-client="Drex Clothing Brand"
@@ -382,13 +446,16 @@
             >
               <div class="card-media">
                 <img
-                  src="drex-apparel.jpg"
-                  alt="Drex Apparel Campaign"
+                  src="assets/drex-apparel.jpg"
+                  alt="Drex apparel commercial streetwear social media campaign"
                   loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="280"
                 />
-                <div class="card-overlay">
+                <div class="card-overlay" aria-hidden="true">
                   <span class="view-btn"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     Explore Project</span
                   >
                 </div>
@@ -409,8 +476,12 @@
             <!-- Project 4: Modern Brand Identity System -->
             <div
               class="project-card"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-label="View case study for Modern Corporate Identity"
               data-category="branding"
-              data-img="brand-identity.jpg"
+              data-img="assets/brand-identity.jpg"
               data-title="Minimalist Brand Identity & Guidelines"
               data-type="Visual Identity & Logo Design"
               data-client="Commercial Client"
@@ -418,13 +489,16 @@
             >
               <div class="card-media">
                 <img
-                  src="brand-identity.jpg"
-                  alt="Brand Identity System"
+                  src="assets/brand-identity.jpg"
+                  alt="Minimalist modern brand identity guideline manual and stationery"
                   loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="280"
                 />
-                <div class="card-overlay">
+                <div class="card-overlay" aria-hidden="true">
                   <span class="view-btn"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     Explore Project</span
                   >
                 </div>
@@ -445,8 +519,12 @@
             <!-- Project 5: DEPI UI/UX Case Study -->
             <div
               class="project-card"
-              data-category="uiux"
-              data-img="depi-uiux.jpg"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-label="View case study for DEPI Digital UI/UX Interface"
+              data-category="branding"
+              data-img="assets/depi-uiux.jpg"
               data-title="Digital Product & UI/UX Design System"
               data-type="UI/UX Prototyping & Wireframing"
               data-client="Digital Egypt Pioneers Initiative (DEPI)"
@@ -454,20 +532,23 @@
             >
               <div class="card-media">
                 <img
-                  src="depi-uiux.jpg"
-                  alt="UI/UX Design System"
+                  src="assets/depi-uiux.jpg"
+                  alt="DEPI digital UI/UX user interface wireframes and high fidelity screens"
                   loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="280"
                 />
-                <div class="card-overlay">
+                <div class="card-overlay" aria-hidden="true">
                   <span class="view-btn"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     Explore Project</span
                   >
                 </div>
               </div>
               <div class="card-content">
                 <div class="card-meta">
-                  <span class="project-tag tag-burgundy">UI/UX</span>
+                  <span class="project-tag tag-burgundy">Branding</span>
                   <span class="project-tag">Figma System</span>
                 </div>
                 <h3 class="card-title">DEPI Digital UI/UX Interface</h3>
@@ -481,8 +562,12 @@
             <!-- Project 6: NASA Space Apps Visual Identity -->
             <div
               class="project-card"
-              data-category="direction"
-              data-img="nasa-space-apps.jpg"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-label="View case study for NASA Space Apps Hackathon"
+              data-category="campaigns"
+              data-img="assets/nasa-space-apps.jpg"
               data-title="NASA Space Apps 6th October"
               data-type="Art Direction & Visual Identity"
               data-client="NASA Space Apps 2026"
@@ -490,13 +575,16 @@
             >
               <div class="card-media">
                 <img
-                  src="nasa-space-apps.jpg"
-                  alt="NASA Space Apps 6th October"
+                  src="assets/nasa-space-apps.jpg"
+                  alt="NASA Space Apps 6th October visual identity key graphics"
                   loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="280"
                 />
-                <div class="card-overlay">
+                <div class="card-overlay" aria-hidden="true">
                   <span class="view-btn"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     Explore Project</span
                   >
                 </div>
@@ -517,8 +605,12 @@
             <!-- Project 7: Reviva Creative Visual Series -->
             <div
               class="project-card"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-label="View case study for Reviva Agency Creative Series"
               data-category="campaigns"
-              data-img="areviva-campaign.jpg"
+              data-img="assets/reviva-campaign.jpg"
               data-title="Reviva Creative Social Series"
               data-type="Social Media Design & Manipulation"
               data-client="Reviva Agency"
@@ -526,13 +618,16 @@
             >
               <div class="card-media">
                 <img
-                  src="reviva-campaign.jpg"
-                  alt="Reviva Creative Social Series"
+                  src="assets/reviva-campaign.jpg"
+                  alt="Reviva creative social series advertising artwork"
                   loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="280"
                 />
-                <div class="card-overlay">
+                <div class="card-overlay" aria-hidden="true">
                   <span class="view-btn"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     Explore Project</span
                   >
                 </div>
@@ -553,8 +648,12 @@
             <!-- Project 8: Growth Gate Event Identity -->
             <div
               class="project-card"
+              role="button"
+              tabindex="0"
+              aria-haspopup="dialog"
+              aria-label="View case study for Growth Gate Summit"
               data-category="branding"
-              data-img="growth-gate.jpg"
+              data-img="assets/growth-gate.jpg"
               data-title="Growth Gate Summit Branding"
               data-type="Event Branding & Stage Graphics"
               data-client="Growth Gate Organization"
@@ -562,13 +661,16 @@
             >
               <div class="card-media">
                 <img
-                  src="growth-gate.jpg"
-                  alt="Growth Gate Summit Branding"
+                  src="assets/growth-gate.jpg"
+                  alt="Growth Gate Summit event branding stage banners and badges"
                   loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="280"
                 />
-                <div class="card-overlay">
+                <div class="card-overlay" aria-hidden="true">
                   <span class="view-btn"
-                    ><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    ><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
                     Explore Project</span
                   >
                 </div>
@@ -606,7 +708,7 @@
                 <i class="fa-brands fa-behance"></i>
               </a>
               <a
-                href="Portfolio light.pdf"
+                href="assets/Portfolio.pdf"
                 target="_blank"
                 class="btn-secondary-glass"
               >
@@ -637,27 +739,18 @@
             <div class="bento-box bento-bio">
               <span class="bento-badge">PHILOSOPHY</span>
               <h3 class="bento-title">
-                “Designs that sell, communicate, and deliver measurable
-                commercial value.”
+                “Designs that communicate with purpose, harmonize aesthetics, and deliver functional impact.”
               </h3>
               <p class="bento-text">
-                I started designing because I enjoy seeing ideas turn into
-                things that can be seen and used. Over more than three years of
-                experience, I’ve become deeply focused on how design truly
-                serves the user and the business—not just how it looks.
+                I approach design with a strategic, user-centered mindset—focusing on how visual communication serves genuine human needs while achieving clear business objectives. Good design isn’t merely what looks remarkable; it’s what functions effortlessly.
               </p>
               <p class="bento-text">
-                Operating at the intersection of graphic design leadership,
-                marketing psychology, and UI/UX systems, I bridge the gap
-                between creative visual artistry and strategic commercial
-                outcomes.
+                With a deep focus on UI/UX and crafting memorable digital experiences, I continuously advance my Front-End Development capabilities. Having hands-on front-end practice directly complements my creative foundation, allowing me to transform brand concepts into responsive, interactive, and high-performance digital environments where aesthetics and code elevate each other.
               </p>
 
               <div class="signature-row">
                 <span class="sig-name">Muhannad Mahmoud</span>
-                <span class="sig-title"
-                  >Mid-level Graphic Designer & UI/UX Designer</span
-                >
+                <span class="sig-title">Graphic Designer</span>
               </div>
             </div>
 
@@ -732,36 +825,36 @@
               </div>
             </div>
 
-            <!-- Bento Box 4: Credentials & Certifications -->
+            <!-- Bento Box 4: Credentials & Activities -->
             <div class="bento-box bento-certs">
-              <span class="bento-badge">CREDENTIALS</span>
+              <span class="bento-badge">CREDENTIALS & ACTIVITIES</span>
               <ul class="certs-list">
                 <li>
-                  <i class="fa-solid fa-award"></i>
+                  <i class="fa-solid fa-award" aria-hidden="true"></i>
                   <div>
                     <strong>UI/UX & Web Design Certification</strong>
                     <span>Digital Egypt Pioneers Initiative (DEPI) • MCIT</span>
                   </div>
                 </li>
                 <li>
-                  <i class="fa-solid fa-certificate"></i>
+                  <i class="fa-solid fa-certificate" aria-hidden="true"></i>
                   <div>
                     <strong>Graphic Design Director Certificate</strong>
                     <span>Computex Academy</span>
                   </div>
                 </li>
                 <li>
-                  <i class="fa-solid fa-microchip"></i>
+                  <i class="fa-solid fa-microchip" aria-hidden="true"></i>
                   <div>
                     <strong>Graphic Design with AI</strong>
                     <span>Microsoft Egypt</span>
                   </div>
                 </li>
                 <li>
-                  <i class="fa-solid fa-shield-halved"></i>
+                  <i class="fa-solid fa-users" aria-hidden="true"></i>
                   <div>
-                    <strong>Best Member Glass Shield & Award</strong>
-                    <span>Growth Gate Summit & LINK</span>
+                    <strong>Graphic Design Member</strong>
+                    <span>LINK CU • Student Activity at Cairo University</span>
                   </div>
                 </li>
               </ul>
@@ -778,125 +871,109 @@
               <span class="sub-label">03 • TRACK RECORD</span>
               <h2 class="section-heading">Professional Journey</h2>
               <p class="section-subtext">
-                3+ years leading creative teams, elevating agencies, and
-                delivering client growth.
+                Chronological record of creative roles, art direction leadership, and commercial impact.
               </p>
             </div>
           </div>
 
           <div class="timeline-wrapper">
-            <!-- Item 2: NASA Space Apps -->
+            <!-- 1. NASA Space Apps 6th October (Aug 2026 – Present) -->
             <div class="timeline-row">
               <div class="timeline-time">
                 <span class="period">Aug 2026 – Present</span>
                 <span class="status-live">CURRENT</span>
               </div>
-              <div class="timeline-dot"></div>
+              <div class="timeline-dot" aria-hidden="true"></div>
               <div class="timeline-card">
                 <div class="exp-header">
-                  <h3 class="exp-role">
-                    Graphic Designer
-                  </h3>
+                  <h3 class="exp-role">Graphic Designer | Head of Design Department</h3>
                   <span class="exp-company">NASA Space Apps 6th October</span>
                 </div>
                 <ul class="exp-bullets">
                   <li>
-                    Designed visual assets and graphic elements, maintaining a cohesive visual identity and consistent design
-direction across the project.
+                    Led the Design Department, setting the art direction, visual style, and key graphic elements across the project.
                   </li>
                   <li>
-                    Enhanced design quality through creative contributions, refined visual concepts, and collaboration with team
-members to ensure consistency across deliverables.
+                    Coordinated and reviewed team designs, developed creative concepts, and ensured visual consistency.
                   </li>
                 </ul>
               </div>
             </div>
 
-            
-
-            <!-- Item 4: Reviva Agency -->
+            <!-- 2. Reviva (Sep 2026 – Oct 2026) -->
             <div class="timeline-row">
               <div class="timeline-time">
                 <span class="period">Sep 2026 – Oct 2026</span>
               </div>
-              <div class="timeline-dot"></div>
+              <div class="timeline-dot" aria-hidden="true"></div>
               <div class="timeline-card">
                 <div class="exp-header">
                   <h3 class="exp-role">Graphic Designer</h3>
-                  <span class="exp-company">Reviva Agency</span>
+                  <span class="exp-company">Reviva</span>
                 </div>
                 <ul class="exp-bullets">
                   <li>
-                    Developed creative visual concepts and designs for client
-                    campaigns, shaping visual direction and maintaining brand
-                    consistency.
+                    Developed creative visual concepts and designs for client campaigns.
+                  </li>
+                  <li>
+                    Shaped visual direction and maintained brand consistency across all outputs.
                   </li>
                 </ul>
               </div>
             </div>
 
-           
-<!-- Item 3: RenadMadi Saudi Arabia -->
+            <!-- 3. IT.RenadMadi (Saudi Arabia) (May 2026 – Sep 2026) -->
             <div class="timeline-row">
               <div class="timeline-time">
                 <span class="period">May 2026 – Sep 2026</span>
-                <span class="market-tag">SAUDI MARKET</span>
+                <span class="market-tag">SAUDI ARABIA</span>
               </div>
-              <div class="timeline-dot"></div>
+              <div class="timeline-dot" aria-hidden="true"></div>
               <div class="timeline-card">
                 <div class="exp-header">
                   <h3 class="exp-role">Graphic Designer</h3>
-                  <span class="exp-company"
-                    >IT.RenadMadi Agency • Saudi Arabia</span
-                  >
+                  <span class="exp-company">IT.RenadMadi (Saudi Arabia)</span>
                 </div>
                 <ul class="exp-bullets">
                   <li>
-                    Developed high-performing social media campaigns that
-                    strengthened brand presence and supported business growth
-                    across Saudi Arabia.
+                    Developed high-performing social media campaigns that strengthened brand presence and supported business growth across Saudi Arabia.
                   </li>
                   <li>
-                    Created strategic branding assets, company profiles, and
-                    marketing materials that helped businesses achieve
-                    commercial targets.
+                    Created strategic branding assets, company profiles, and marketing materials that helped businesses achieve their commercial targets.
                   </li>
                 </ul>
               </div>
             </div>
-             <!-- Item 5: DEPI UI/UX -->
+
+            <!-- 4. Digital Egypt Pioneers Initiative (DEPI) – MCIT (Dec 2025 – Jul 2026) -->
             <div class="timeline-row">
               <div class="timeline-time">
                 <span class="period">Dec 2025 – Jul 2026</span>
               </div>
-              <div class="timeline-dot"></div>
+              <div class="timeline-dot" aria-hidden="true"></div>
               <div class="timeline-card">
                 <div class="exp-header">
                   <h3 class="exp-role">UI/UX Trainee</h3>
-                  <span class="exp-company"
-                    >Digital Egypt Pioneers Initiative (DEPI)</span
-                  >
+                  <span class="exp-company">Digital Egypt Pioneers Initiative (DEPI) – MCIT</span>
                 </div>
                 <ul class="exp-bullets">
                   <li>
-                    Learned and applied user-centric UI/UX principles through
-                    hands-on exercises, wireframing, prototyping, and usability
-                    testing.
+                    Learned and applied user-centric UI/UX design principles through hands-on exercises, wireframing, prototyping, and usability testing.
                   </li>
                   <li>
-                    Collaborated on design projects, producing digital solutions
-                    with continuous feedback.
+                    Collaborated on team-based design projects, producing digital solutions with continuous mentor feedback.
                   </li>
                 </ul>
               </div>
             </div>
-            <!-- Item 6: Drex Clothing Brand -->
+
+            <!-- 5. Drex (Clothing Brand) (Jun 2025 – Sep 2025) -->
             <div class="timeline-row">
               <div class="timeline-time">
                 <span class="period">Jun 2025 – Sep 2025</span>
                 <span class="metric-pill">+15% SALES</span>
               </div>
-              <div class="timeline-dot"></div>
+              <div class="timeline-dot" aria-hidden="true"></div>
               <div class="timeline-card">
                 <div class="exp-header">
                   <h3 class="exp-role">Graphic Designer</h3>
@@ -904,23 +981,21 @@ members to ensure consistency across deliverables.
                 </div>
                 <ul class="exp-bullets">
                   <li>
-                    Designed promotional social media visuals that boosted
-                    online engagement and enhanced brand visibility.
+                    Designed promotional social media visuals that boosted online engagement and enhanced brand visibility.
                   </li>
                   <li>
-                    Created campaigns that directly contributed to a 15%
-                    increase in online sales during promotional periods.
+                    Created campaigns that directly contributed to a 15% increase in online sales during promotional periods.
                   </li>
                 </ul>
               </div>
             </div>
-             <!-- Item 1: Computex (Lead Director Role) -->
+
+            <!-- 6. Computex (Dec 2024 – Mar 2025) -->
             <div class="timeline-row">
               <div class="timeline-time">
                 <span class="period">Dec 2024 – Mar 2025</span>
-                <span class="status-live">DIRECTOR ROLE</span>
               </div>
-              <div class="timeline-dot"></div>
+              <div class="timeline-dot" aria-hidden="true"></div>
               <div class="timeline-card">
                 <div class="exp-header">
                   <h3 class="exp-role">Director of Graphic Design</h3>
@@ -928,45 +1003,60 @@ members to ensure consistency across deliverables.
                 </div>
                 <ul class="exp-bullets">
                   <li>
-                    Developed and mentored 40+ designers and team members
-                    through structured design guidance and continuous creative
-                    feedback.
+                    Developed and mentored 40+ designers and team members through structured design guidance and continuous creative feedback.
                   </li>
                   <li>
-                    Managed and directed company-wide graphic design output,
-                    delivering high-volume social media and marketing assets
-                    while maintaining strict brand consistency.
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- Item 2: NASA Space Apps -->
-            <div class="timeline-row">
-              <div class="timeline-time">
-                <span class="period">May 2024 – Aug 2024</span>
-                <span class="status-live">Internship</span>
-              </div>
-              <div class="timeline-dot"></div>
-              <div class="timeline-card">
-                <div class="exp-header">
-                  <h3 class="exp-role">
-                    Graphic Designer • Design Coordinator
-                  </h3>
-                  <span class="exp-company">Growth Gate</span>
-                </div>
-                <ul class="exp-bullets">
-                  <li>
-                    Developed and designed social media and event graphics, ensuring all visuals aligned with the event's branding
-and sponsor requirements.
-                  </li>
-                  <li>
-                    Organized and collaborated with teams and stakeholders to deliver high-quality promotional content, enhancing
-event visibility and audience engagement.
+                    Managed and directed the company's graphic design output, delivering high-volume social media and marketing assets while maintaining brand consistency.
                   </li>
                 </ul>
               </div>
             </div>
 
+            <!-- 7. Growth Gate – Event for OpportunityShip (Oct 2024 – Dec 2024) -->
+            <div class="timeline-row">
+              <div class="timeline-time">
+                <span class="period">Oct 2024 – Dec 2024</span>
+                <span class="market-tag">AWARD RECOGNIZED</span>
+              </div>
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <div class="exp-header">
+                  <h3 class="exp-role">Graphic Designer & Design Organizer</h3>
+                  <span class="exp-company">Growth Gate – Event for OpportunityShip</span>
+                </div>
+                <ul class="exp-bullets">
+                  <li>
+                    Designed event promotional graphics, social media content, and branded materials.
+                  </li>
+                  <li>
+                    Received a glass shield and best member award in recognition of outstanding contributions and creative excellence.
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 8. Freelance Clients (120+ Clients) (Mar 2024 – Present) -->
+            <div class="timeline-row">
+              <div class="timeline-time">
+                <span class="period">Mar 2024 – Present</span>
+                <span class="metric-pill">120+ CLIENTS</span>
+              </div>
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-card">
+                <div class="exp-header">
+                  <h3 class="exp-role">Graphic Designer</h3>
+                  <span class="exp-company">Freelance Clients (120+ Clients)</span>
+                </div>
+                <ul class="exp-bullets">
+                  <li>
+                    Served over 120 clients across diverse industries including fashion, real estate, food & beverage, tech, and education.
+                  </li>
+                  <li>
+                    Delivered brand identities, social media campaigns, marketing materials, and digital ads generating 500+ qualified leads for client businesses.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -986,19 +1076,20 @@ event visibility and audience engagement.
           </div>
 
           <div class="skills-grid">
-            <!-- Tool 1: Adobe Photoshop (Official Vector SVG Badge) -->
+            <!-- Tool 1: Adobe Photoshop (Official Brand Asset) -->
             <div class="tool-card">
-              <div class="official-tool-badge">
+              <div class="official-tool-badge tool-ps">
                 <svg
-                  viewBox="0 0 48 48"
+                  viewBox="0 0 42 42"
                   class="tool-svg-icon"
                   aria-hidden="true"
+                  width="48"
+                  height="48"
+                  fill="none"
                 >
-                  <rect width="48" height="48" rx="10" fill="#001e36" />
-                  <path
-                    d="M12 14.5h6.5c4.5 0 7.2 2.4 7.2 6.2 0 4-2.8 6.3-7.2 6.3H15.8V33H12V14.5zm3.8 9.3h2.5c2.2 0 3.6-1.1 3.6-3.1 0-2-1.4-3-3.6-3h-2.5v6.1zm15.4 3.7c1.4 0 2.6.4 3.4 1l-.9 2.5c-.8-.5-1.7-.8-2.6-.8-1.4 0-2.1.7-2.1 1.6 0 2.5 5.9 1.4 5.9 6 0 2.7-2.2 4.4-5.3 4.4-1.6 0-3-.4-4-1.1l.9-2.6c.9.6 2 1 3.2 1 1.6 0 2.3-.7 2.3-1.6 0-2.6-5.9-1.5-5.9-6 0-2.7 2.1-4.4 5.1-4.4z"
-                    fill="#31a8ff"
-                  />
+                  <path d="M34.4678 0H7.53225C3.3723 0 0 3.3723 0 7.53225V34.4678C0 38.6277 3.3723 42 7.53225 42H34.4678C38.6277 42 42 38.6277 42 34.4678V7.53225C42 3.3723 38.6277 0 34.4678 0Z" fill="#001E36" />
+                  <path d="M14.6661 11.1485C20.1565 11.1485 23.2484 13.7203 23.2484 18.0259C23.2484 23.0539 19.0584 25.0767 15.1284 25.0767H12.47V30.5093H7.09517V11.1485H14.6661ZM12.47 15.7431V20.4821H14.8395C16.4866 20.4821 17.6425 19.8175 17.6425 18.1415C17.6425 16.61 16.66 15.7431 14.9551 15.7431H12.47Z" fill="#31A8FF" />
+                  <path d="M24.3408 29.5557L24.3698 25.0767C25.9013 26.0881 28.0396 26.7238 29.5134 26.7238C30.5247 26.7238 30.9871 26.4348 30.9871 25.9147C30.9871 25.3368 30.3514 25.1056 29.1377 24.7299C26.797 24.0364 24.2253 23.0828 24.2253 20.0198C24.2253 16.8989 26.797 15.1652 30.5247 15.1652C32.2874 15.1652 33.7323 15.4252 35.0037 15.9743L34.9748 20.251C33.9634 19.6441 31.9696 19.0951 30.6692 19.0951C29.7156 19.0951 29.34 19.3841 29.34 19.8175C29.34 20.3376 29.8023 20.4821 31.1894 20.9156C33.8768 21.7247 36.1307 22.5916 36.1307 25.7413C36.1307 28.7465 33.6745 30.7693 29.8312 30.7693C27.8084 30.7693 25.9013 30.4226 24.3408 29.5557Z" fill="#31A8FF" />
                 </svg>
               </div>
               <div class="tool-info">
@@ -1016,52 +1107,55 @@ event visibility and audience engagement.
               </div>
             </div>
 
-            <!-- Tool 2: Adobe Illustrator (Official Vector SVG Badge) -->
+            <!-- Tool 2: Adobe Illustrator (Official Brand Asset - 90%) -->
             <div class="tool-card">
-              <div class="official-tool-badge">
+              <div class="official-tool-badge tool-ai">
                 <svg
-                  viewBox="0 0 48 48"
+                  viewBox="0 0 42 42"
                   class="tool-svg-icon"
                   aria-hidden="true"
+                  width="48"
+                  height="48"
+                  fill="none"
                 >
-                  <rect width="48" height="48" rx="10" fill="#330000" />
-                  <path
-                    d="M11 33l6.2-18.5h4.1L27.5 33h-3.9l-1.5-4.8h-6.8L13.8 33H11zm6.2-7.8h5.2l-2.6-8.5-2.6 8.5zm14-10.7h3.8V33h-3.8V14.5z"
-                    fill="#ff9a00"
-                  />
+                  <path d="M34.4678 0H7.53225C3.3723 0 0 3.3723 0 7.53225V34.4678C0 38.6277 3.3723 42 7.53225 42H34.4678C38.6277 42 42 38.6277 42 34.4678V7.53225C42 3.3723 38.6277 0 34.4678 0Z" fill="#330000" />
+                  <path d="M14.2156 11.1485H20.3994L27.3346 30.5092H21.6708L20.7173 27.5618H13.4641L12.5106 30.5092H7.07806L14.2156 11.1485ZM19.2146 22.9672L17.1052 16.4655L14.9957 22.9672H19.2146Z" fill="#FF9A00" />
+                  <path d="M28.1644 12.42C28.1644 11.0329 29.2336 10.1371 30.8518 10.1371C32.441 10.1371 33.4524 11.0618 33.4524 12.42C33.4524 13.807 32.441 14.7606 30.8518 14.7606C29.1757 14.7606 28.1644 13.8359 28.1644 12.42ZM28.3088 15.4252H33.3657V30.5092H28.3088V15.4252Z" fill="#FF9A00" />
                 </svg>
               </div>
               <div class="tool-info">
                 <div class="tool-title-row">
                   <h4>Adobe Illustrator</h4>
-                  <span class="pct">95%</span>
+                  <span class="pct">90%</span>
                 </div>
                 <p>
                   Vector logo systems, bespoke brand typography, icons, modular
                   design guidelines, and print collateral.
                 </p>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 95%"></div>
+                  <div class="bar-fill" style="width: 90%"></div>
                 </div>
               </div>
             </div>
 
-            <!-- Tool 3: Figma (Official Multi-colored Vector Logo) -->
+            <!-- Tool 3: Figma (Official Multi-colored Brand Logo - 75%) -->
             <div class="tool-card">
-              <div class="official-tool-badge">
+              <div class="official-tool-badge tool-figma">
                 <svg
                   viewBox="0 0 48 48"
                   class="tool-svg-icon"
                   aria-hidden="true"
+                  width="48"
+                  height="48"
                 >
-                  <rect width="48" height="48" rx="10" fill="#18131e" />
-                  <g transform="translate(13, 7) scale(1.02)">
+                  <rect width="48" height="48" rx="10" fill="#0D0B12" />
+                  <g transform="translate(13, 7)">
                     <path
-                      d="M0 28.5C0 25.46 2.46 23 5.5 23H11V28.5C11 31.54 8.54 34 5.5 34C2.46 34 0 31.54 0 28.5Z"
+                      d="M0 27.5C0 24.46 2.46 22 5.5 22H11V27.5C11 30.54 8.54 33 5.5 33C2.46 33 0 30.54 0 27.5Z"
                       fill="#0ACF83"
                     />
                     <path
-                      d="M0 17.5C0 14.46 2.46 12 5.5 12H11V23H5.5C2.46 23 0 20.54 0 17.5Z"
+                      d="M0 16.5C0 13.46 2.46 11 5.5 11H11V22H5.5C2.46 22 0 19.54 0 16.5Z"
                       fill="#A259FF"
                     />
                     <path
@@ -1073,7 +1167,7 @@ event visibility and audience engagement.
                       fill="#FF7262"
                     />
                     <path
-                      d="M22 17.5C22 20.54 19.54 23 16.5 23C13.46 23 11 20.54 11 17.5C11 14.46 13.46 12 16.5 12C19.54 12 22 14.46 22 17.5Z"
+                      d="M22 16.5C22 19.54 19.54 22 16.5 22C13.46 22 11 19.54 11 16.5C11 13.46 13.46 11 16.5 11C19.54 11 22 13.46 22 16.5Z"
                       fill="#1ABCFE"
                     />
                   </g>
@@ -1082,31 +1176,32 @@ event visibility and audience engagement.
               <div class="tool-info">
                 <div class="tool-title-row">
                   <h4>Figma</h4>
-                  <span class="pct">88%</span>
+                  <span class="pct">75%</span>
                 </div>
                 <p>
                   Design systems, responsive UI components, user flow
                   wireframing, high-fidelity interactive prototypes.
                 </p>
                 <div class="bar-track">
-                  <div class="bar-fill" style="width: 88%"></div>
+                  <div class="bar-fill" style="width: 75%"></div>
                 </div>
               </div>
             </div>
 
-            <!-- Tool 4: Adobe Premiere Pro (Official Vector SVG Badge) -->
+            <!-- Tool 4: Adobe Premiere Pro (Official Brand Asset - 80%) -->
             <div class="tool-card">
-              <div class="official-tool-badge">
+              <div class="official-tool-badge tool-pr">
                 <svg
-                  viewBox="0 0 48 48"
+                  viewBox="0 0 240 240"
                   class="tool-svg-icon"
                   aria-hidden="true"
+                  width="48"
+                  height="48"
+                  fill="none"
                 >
-                  <rect width="48" height="48" rx="10" fill="#1e0033" />
-                  <path
-                    d="M12 14.5h6.5c4.5 0 7.2 2.4 7.2 6.2 0 4-2.8 6.3-7.2 6.3H15.8V33H12V14.5zm3.8 9.3h2.5c2.2 0 3.6-1.1 3.6-3.1 0-2-1.4-3-3.6-3h-2.5v6.1zm11.7 0H31v2.5c.8-1.7 2.3-2.7 4.5-2.7v3.7c-2.7 0-4.3 1.5-4.3 4.2V33h-3.7V23.8z"
-                    fill="#ea77ff"
-                  />
+                  <path d="M196.959 0H43.0414C19.2703 0 0 19.2703 0 43.0414V196.959C0 220.73 19.2703 240 43.0414 240H196.959C220.73 240 240 220.73 240 196.959V43.0414C240 19.2703 220.73 0 196.959 0Z" fill="#00005B" />
+                  <path d="M92.5516 63.7059C123.925 63.7059 141.594 78.4019 141.594 103.005C141.594 131.737 117.65 143.296 95.1933 143.296H80.002V174.339H49.2894V63.7059H92.5516ZM80.002 89.9604V117.041H93.5427C102.955 117.041 109.559 113.243 109.559 103.666C109.559 94.9144 103.945 89.9604 94.2027 89.9604H80.002Z" fill="#9999FF" />
+                  <path d="M184.411 86.6581C191.181 86.6581 196.63 87.4837 199.107 88.3093V110.766C197.125 110.271 193.327 109.94 190.19 109.94C184.081 109.94 180.613 110.436 177.475 111.592V174.339H148.579V93.9235C158.981 89.3001 169.385 86.6581 184.411 86.6581Z" fill="#9999FF" />
                 </svg>
               </div>
               <div class="tool-info">
@@ -1125,19 +1220,20 @@ event visibility and audience engagement.
             </div>
           </div>
 
-          <!-- Competencies Tags -->
+          <!-- Competencies Tags: Refined Core Disciplines -->
           <div class="competencies-block">
             <span class="comp-label">CORE DISCIPLINES:</span>
             <div class="comp-tags-wrap">
-              <span class="c-tag">Brand Identity Strategy</span>
-              <span class="c-tag">Logo Architecture</span>
-              <span class="c-tag">Marketing Campaigns</span>
-              <span class="c-tag">Typography Hierarchy</span>
-              <span class="c-tag">Art Direction & Mentorship</span>
-              <span class="c-tag">UI/UX Wireframing</span>
-              <span class="c-tag">Color Psychology</span>
-              <span class="c-tag">Design Systems</span>
-              <span class="c-tag">Commercial Video Pacing</span>
+              <span class="c-tag">Brand Strategy & Development</span>
+              <span class="c-tag">Visual Identity Systems</span>
+              <span class="c-tag">Brand Identity Design</span>
+              <span class="c-tag">Logo Design & Development</span>
+              <span class="c-tag">Social Media Campaign Design</span>
+              <span class="c-tag">Social Media Visual Systems</span>
+              <span class="c-tag">Digital Advertising Creatives</span>
+              <span class="c-tag">Creative Campaign Development</span>
+              <span class="c-tag">Marketing Visual Communication</span>
+              <span class="c-tag">Brand Consistency & Guidelines</span>
             </div>
           </div>
         </div>
@@ -1157,10 +1253,74 @@ event visibility and audience engagement.
                 >
               </h2>
               <p class="contact-desc">
-                Looking to elevate your brand presence, scale marketing
-                performance, or need seasoned creative direction? My inbox is
-                always open.
+                Looking to elevate your brand presence, launch high-converting campaigns, or build a scalable digital identity? Send a direct message below.
               </p>
+
+              <!-- Professional Direct Contact Form -->
+              <form class="contact-form-glass" id="contactForm" novalidate>
+                <div class="form-row form-row-2">
+                  <div class="form-group">
+                    <label for="contactName" class="form-label">Full Name <span class="req">*</span></label>
+                    <input
+                      type="text"
+                      id="contactName"
+                      name="name"
+                      class="form-control"
+                      placeholder="e.g. Sarah Jenkins"
+                      required
+                      autocomplete="name"
+                    />
+                    <span class="form-error-hint" id="nameError" aria-live="polite"></span>
+                  </div>
+                  <div class="form-group">
+                    <label for="contactEmail" class="form-label">Email Address <span class="req">*</span></label>
+                    <input
+                      type="email"
+                      id="contactEmail"
+                      name="email"
+                      class="form-control"
+                      placeholder="e.g. sarah@example.com"
+                      required
+                      autocomplete="email"
+                    />
+                    <span class="form-error-hint" id="emailError" aria-live="polite"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSubject" class="form-label">Subject <span class="req">*</span></label>
+                  <input
+                    type="text"
+                    id="contactSubject"
+                    name="subject"
+                    class="form-control"
+                    placeholder="e.g. Brand Identity & Social Campaign Project"
+                    required
+                  />
+                  <span class="form-error-hint" id="subjectError" aria-live="polite"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactMessage" class="form-label">Message <span class="req">*</span></label>
+                  <textarea
+                    id="contactMessage"
+                    name="message"
+                    class="form-control form-textarea"
+                    rows="4"
+                    placeholder="Briefly describe your project, timeline, and goals..."
+                    required
+                  ></textarea>
+                  <span class="form-error-hint" id="messageError" aria-live="polite"></span>
+                </div>
+
+                <div class="form-action-row">
+                  <button type="submit" class="btn-primary-glow btn-submit-form" id="contactSubmitBtn">
+                    <span>Send Message</span>
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                  </button>
+                  <div id="contactFormStatus" class="form-status-msg" aria-live="polite"></div>
+                </div>
+              </form>
 
               <!-- Copyable Email Bar -->
               <div
@@ -1235,19 +1395,26 @@ event visibility and audience engagement.
     </main>
 
     <!-- ================= PROJECT LIGHTBOX MODAL ================= -->
-    <div class="project-modal" id="projectModal">
-      <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div
+      class="project-modal"
+      id="projectModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-describedby="modalDesc"
+    >
+      <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"></div>
       <div class="modal-window">
         <button
           class="modal-close-btn"
           id="modalCloseBtn"
-          aria-label="Close modal"
+          aria-label="Close project details modal (or press Escape)"
         >
-          <i class="fa-solid fa-xmark"></i>
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
         </button>
         <div class="modal-body">
           <div class="modal-img-col">
-            <img src="" alt="" id="modalImg" class="modal-full-img" />
+            <img src="" alt="" id="modalImg" class="modal-full-img" loading="lazy" decoding="async" />
           </div>
           <div class="modal-info-col">
             <span class="modal-type" id="modalType">PROJECT TYPE</span>
@@ -1263,10 +1430,12 @@ event visibility and audience engagement.
               <a
                 href="https://www.behance.net/mohanedmahmoud1"
                 target="_blank"
+                rel="noopener noreferrer"
                 class="btn-primary-glow w-100"
+                aria-label="View Full Case Study on Behance (opens in new tab)"
               >
                 <span>View Full Case Study on Behance</span>
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -1275,63 +1444,68 @@ event visibility and audience engagement.
     </div>
 
     <!-- ================= TOAST NOTIFICATION ================= -->
-    <div class="futuristic-toast" id="toastNotice">
-      <i class="fa-solid fa-circle-check"></i>
+    <div class="futuristic-toast" id="toastNotice" role="status" aria-live="polite">
+      <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
       <span id="toastMsg">Email copied to clipboard!</span>
     </div>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
       <div class="footer-container">
         <div class="footer-left">
-          <span class="footer-brand">Muhannad Dinar</span>
+          <span class="footer-brand">MUHANNAD MAHMOUD</span>
           <span class="footer-copy"
-            >© 2026 Muhannad Dianr — All Rights Reserved.</span
+            >© 2026. All Rights Reserved. Graphic Designer.</span
           >
         </div>
 
         <div class="footer-center">
-          <div class="footer-clock">
-            <span class="pulse-green"></span>
-            <span id="localTimeDisplay">GIZA, EGYPT • 03:30 AM (EET)</span>
+          <div class="footer-clock" aria-label="Current local time in Giza, Egypt">
+            <span class="pulse-green" aria-hidden="true"></span>
+            <span id="localTimeDisplay">GIZA, EGYPT • LIVE (EET)</span>
           </div>
         </div>
 
         <div class="footer-right">
-          <div class="footer-socials">
+          <div class="footer-socials" aria-label="Social media profiles">
             <a
               href="https://www.behance.net/mohanedmahmoud1"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Behance profile"
               title="Behance"
-              ><i class="fa-brands fa-behance"></i
-            ></a>
+            ><i class="fa-brands fa-behance" aria-hidden="true"></i></a>
             <a
               href="https://www.linkedin.com/in/muhannad-dinar-933a322b2/"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
               title="LinkedIn"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
+            ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
             <a
               href="https://www.instagram.com/mohned.mahmoud.180?igsh=MTRxamp0OWNlbGM5NQ=="
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram profile"
               title="Instagram"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
+            ><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
             <a
               href="https://www.facebook.com/mohned.mahmoud.180/"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook profile"
               title="Facebook"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
+            ><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
             <a
               href="https://wa.me/201118186848"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp direct chat"
               title="WhatsApp"
-              ><i class="fa-brands fa-whatsapp"></i
-            ></a>
+            ><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
           </div>
-          <a href="#hero" class="btn-back-top" title="Back to top">
-            <i class="fa-solid fa-arrow-up"></i>
+          <a href="#hero" class="btn-back-top" aria-label="Back to top of page" title="Back to top">
+            <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
           </a>
         </div>
       </div>
