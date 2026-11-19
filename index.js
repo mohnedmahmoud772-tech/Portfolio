@@ -233,6 +233,7 @@
         const modalType = document.getElementById('modalType');
         const modalClient = document.getElementById('modalClient');
         const modalDesc = document.getElementById('modalDesc');
+        const modalLink = document.getElementById('modalCaseLink');
 
         if (!modal) return;
 
@@ -255,6 +256,9 @@
             if (modalType) modalType.textContent = type || 'Visual Identity';
             if (modalClient) modalClient.textContent = client || 'Confidential Client';
             if (modalDesc) modalDesc.textContent = desc || '';
+            // Each project opens its own Behance case study
+            const link = card.getAttribute('data-link');
+            if (modalLink && link) modalLink.setAttribute('href', link);
 
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
